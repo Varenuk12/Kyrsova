@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="stylesheet" href="../css/aboutUs.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="https://mod.gov.ua/">
+                    <img src="../img/logo.png" alt="Logo">
+                    <p>Управління<br> фізичної культури і спорту</p>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../static/aboutUs.html">Про нас</a></li>
+                    <li><a href="../static/services.html">Послуги</a></li>
+                    <li><a href="../static/contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="about-us">
+                <div class="about-us-intro">
+                    <h1>Про нас</h1>
+                    <p>Наша мета — сприяти розвитку фізичної культури та спорту в Україні,
+                        покращуючи здоров'я нації та підтримуючи талановитих спортсменів.</p>
+                    <p>Ми прагнемо створити спортивну націю, де фізична активність є важливою
+                        частиною життя кожного.</p>
+                    
+                    <h2>Історія</h2>
+                    <p>Міністерство спорту України стало центром підтримки розвитку фізичної
+                        культури та спорту в країні.</p>
+                    
+                    <h2>Наші цінності</h2>
+                    <p>Чесність, відмінність, доступність для всіх та командна робота — основа наших принципів.</p>
+                    <div class="scroll-arrow" id="scroll-arrow">
+                        <span>&#x2193;</span> 
+                    </div>
+                </div>
+                
+                <div class="team-section ">
+                    <h2>Наша команда</h2>
+                    <p>Познайомтеся з тими, хто робить можливим розвиток спорту в Україні.</p>
+                    <div class="team-gallery">
+                        <div class="team-member">
+                            <a href="https://mms.gov.ua/persons/matviy-bidniy">
+                                <img src="../img/deputats/head.png" alt="Team Member 1">
+                            </a>
+                            <h3>Бідний Матвій Вікторович</h3>
+                            <span>Міністр молоді та спорту України</span>
+                        </div>
+                        <div class="team-member">
+                            <a href="https://mms.gov.ua/persons/yuriy-muzika">
+                                <img src="../img/deputats/chief.png" alt="Team Member 1">
+                            </a>
+                            <h3>Музика Юрій Леонідович</h3>
+                            <span>Перший заступник Міністра молоді та спорту України</span>
+                        </div>
+                        <div class="team-member">
+                            <a href="https://mms.gov.ua/persons/sergiy-timofeev">
+                                <img src="../img/deputats/first-chief.png" alt="Team Member 1">
+                            </a>
+                            <h3>Тимофєєв Сергій Олександрович</h3>
+                            <span>Заступник Міністра молоді та спорту України</span>
+                        </div>
+                        <div class="team-member">
+                            <a href="https://mms.gov.ua/persons/oleksiy-nikitenko">
+                                <img src="../img/deputats/third-chief.png" alt="Team Member 1">
+                            </a>
+                            <h3>Нікітенко Олексій Володимирович</h3>
+                            <span>Заступник Міністра молоді та спорту України</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-section">
+                    <h2>Фото та галерея</h2>
+                    <div class="photo-gallery ">
+                        <img src="../img/competition/1.jpg" alt="Sport event" class="gallery-img" onclick="openModal(this)">
+                        <img src="../img/competition/2.jpg" alt="Training session" class="gallery-img" onclick="openModal(this)">
+                        <img src="../img/competition/3.jpg" alt="National team" class="gallery-img" onclick="openModal(this)">
+                        <img src="../img/competition/4.webp" alt="National team" class="gallery-img" onclick="openModal(this)">
+                        <img src="../img/competition/5.jpg" alt="National team" class="gallery-img" onclick="openModal(this)">
+                        <img src="../img/competition/6.jpeg" alt="National team" class="gallery-img" onclick="openModal(this)">
+                    </div>
+                  
+                    <div id="photoModal" class="modal">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <div class="modal-content-container">
+                            <img class="modal-content" id="modalImage">
+                        </div>
+                        <button class="prev-btn" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next-btn" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                </div>
+                
+                <div class="about-us-stats-section">
+                    <h2>Наші досягнення</h2>
+                    <p>Ось кілька статистичних даних, які ілюструють наші досягнення та прогрес:</p>
+                    <div class="about-us-stats ">
+                        <canvas id="achievementBarChart" width="200" height="200"></canvas>
+                    
+                        <canvas id="achievementCircle" width="200" height="200"></canvas>
+                    
+                        <canvas id="achievementRadar" width="200" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="counter-section">
+                    <h2>Наші досягнення у цифрах</h2>
+                    <div class="counter-container">
+                        <div>
+                            <div class="counter" data-target="500">0</div>
+                            <div class="counter-description">Учасників подій</div>
+                        </div>
+                        <div>
+                            <div class="counter" data-target="150">0</div>
+                            <div class="counter-description">Спортивних заходів</div>
+                        </div>
+                        <div>
+                            <div class="counter" data-target="75">0</div>
+                            <div class="counter-description">Національних нагород</div>
+                        </div>
+                        <div>
+                            <div class="counter" data-target="1000">0</div>
+                            <div class="counter-description">Годин тренувань</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ambitions">
+                    <h2>Наші послуги та ініціативи</h2>
+                    <ul id="ambitions-list">
+                    </ul>
+                </div>
+
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Міністерство фізичної культури та спорту України</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/aboutUsScript.js">
+    </script>
+
+</body>
+
+</html>

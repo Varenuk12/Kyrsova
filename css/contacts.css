@@ -1,0 +1,114 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+.logo a {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-decoration: none;
+  color: #f9f9f9;
+}
+.p {
+  width: 50px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #141414;
+  padding: 10px 75px;
+  color: white;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 60%;
+}
+.contact-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.contact-info p {
+  font-size: 20px;
+}
+.contact-info-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50px;
+  margin: 10px 0;
+}
+.contact-details {
+  margin-top: 30px;
+}
+.contact-details h5 {
+  color: #747473;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #006bb7;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #141414;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
